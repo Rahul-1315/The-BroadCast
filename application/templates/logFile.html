@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <table class="table table-hover">
+        <thead>
+            <tr class="">
+                <th scope="col">Email</th>
+                <th scope="col">Time Stamp</th>
+                <th scope="col">News ID</th>
+                <th scope="col">News Headline</th>
+                <th scope="col">Category</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in users %}
+            <!-- Construct the rest of courses here -->
+            <tr>
+                <td scope='row'>{{ data.r1['email']}}</td>
+
+                <td>{{ data.r2['timestamp']}}</td>
+                <td>{{ data.r2['news_id']}}</td>
+                <td>{{ data.r2['headline']}}</td>
+                <td>{{ data.r2['category']}}</td>
+                <td>
+                    <a href="/update/{{data.r2['news_id']}}">
+                        <button class="btn btn-outline-primary btn-sm">Update</button>
+                    </a>
+                </td>
+                <form action="{{ url_for('delete_news') }}" method="POST">
+                    <input type="number" name="news_id" hidden value="{{ data.r2['news_id'] }}">
+                    <td><button type="submit" class="btn btn-outline-danger  btn-sm">Delete</button></td>
+                </form>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

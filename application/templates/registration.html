@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+{% if user %}
+<div class="container">
+
+    <!-- <br><br> -->
+    <br><br>
+    <fieldset id="URegistration" style="border: 3px #ffc107 solid; padding: 20px;">
+        <h3>User Registration</h3>
+        <form action="{{ url_for('user_registration') }}" method="POST">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">First Name</label>
+                <input required name='first_name' type="text" class="form-control" id="exampleFormControlInput1"
+                    placeholder="First Name">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Last Name</label>
+                <input required name='last_name' type="text" class="form-control" id="exampleFormControlInput1"
+                    placeholder="Last Name">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email</label>
+                <input required name='email' type="email" class="form-control" id="exampleFormControlInput1"
+                    placeholder="example@mail.com">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Password</label>
+                <input required name='password' type="password" class="form-control" id="exampleFormControlInput1"
+                    placeholder="Password">
+            </div>
+            <center><button class=" btn btn-outline-warning btn-lg">Submit</button></center>
+        </form>
+    </fieldset>
+
+</div>
+{% else %}
+<div class="container">
+    <br><br>
+    <fieldset id="ARegistration" style="border: 3px #ffc107 solid; padding: 20px;">
+        <h3>Admin Registration</h3>
+        <form action="{{ url_for('admin_registration') }}" method="POST">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">First Name</label>
+                <input required name='first_name' type="text" class="form-control" id="exampleFormControlInput1"
+                    placeholder="First Name">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Last Name</label>
+                <input required name='last_name' type="text" class="form-control" id="exampleFormControlInput1"
+                    placeholder="Last Name">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email</label>
+                <input required name='email' type="email" class="form-control" id="exampleFormControlInput1"
+                    placeholder="example@mail.com">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Password</label>
+                <input required name='password' type="password" class="form-control" id="exampleFormControlInput1"
+                    placeholder="Password">
+            </div>
+            <center><button class=" btn btn-outline-warning btn-lg">Submit</button></center>
+        </form>
+    </fieldset>
+</div>
+{% endif %}
+<!-- <script>
+    function button(value) {
+        doc = document.getElementById(value)
+        if (value == 'ARegistration') {
+            document.getElementById('URegistration').style.display = 'none';
+            if (doc.style.display == 'none') {
+                doc.style.display = 'block';
+            } else {
+                doc.style.display = 'none'
+            }
+        }
+        if (value == 'URegistration') {
+            document.getElementById('ARegistration').style.display = 'none';
+            if (doc.style.display == 'none') {
+                doc.style.display = 'block';
+            } else {
+                doc.style.display = 'none'
+            }
+        }
+    }
+</script> -->
+<br><br>
+{% endblock %}

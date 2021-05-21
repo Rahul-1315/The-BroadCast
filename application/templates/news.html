@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container_1">
+    {% for news in objects %}
+    <div class="card text-white bg-dark mb-3" style="width: 350px;">
+        <div class="card-body">
+            <h5 class="card-title">{{ news.headline }}</h5>
+            <p class="card-text">{{ news.description }}</p>
+            <h5>-{{news.author}}</h5>
+            <center><button class="btn btn-outline-warning btn-md">{{ news.category }}</button></center>
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
+<br><br><br>
+<div class="container">
+    <center><span>Wanna Add News ? click the link below to get registered right way! <br><a
+                href="{{ url_for('user_registration') }}" style="color: #ffc107;">Register</a></span>
+    </center>
+</div>
+<br><br>
+
+{% endblock %}

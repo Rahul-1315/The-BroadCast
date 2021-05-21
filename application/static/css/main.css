@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#8cc3f0;
+    color: white;
+}
+/* color:rgb(106,256,153) */
+
+header {
+    text-align: center;
+}
+
+li {
+    display: inline;
+    padding: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover { color : white;}
+
+hr {
+    width: 100%;
+    height:4px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: darkblue;
+    border: 0 none;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.top-container {
+    background: #ccc;
+    padding:5px;
+    border-bottom:2px solid #0f0f0f;
+}
+.bottom-container {
+
+    padding:5px;
+    border-top:2px solid #0f0f0f;
+    bottom:0;
+    color: #333;
+}
+
+.container-term {
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+footer {
+    text-align: center;
+    color: white;
+    padding: 5px;
+    margin-top: 10px;
+    
+}
+
+.btn-submit {
+    background-color: cornflowerblue;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+.btn-submit:hover {
+    opacity: 1;
+}
+
+#submit{
+    cursor: pointer;
+    color: #000;
+    border: none;
+    width:10%;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+#submit:hover{
+    background-color: #007bff;
+    color: #fff;
+}
+
+
+.news {
+    float: right;
+    /* position: absolute;
+    right: 6rem;
+    top:3rem */
+}
+
+.container_1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: auto;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: space-around;
+    align-self: baseline;
+
+}
+footer{
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    position:relative;
+    bottom: 0;
+    
+}
+
+.text-muted{
+    color:rgb(170, 160, 114);
+}
+.brand {
+    position: absolute;
+    right: 600px;
+    font-family: ubuntu;
+    color: whitesmoke;
+}
+h4{
+    color: white;
+}
+
+.nav{
+    background-color:#20374c !important;
+
+}
+li .links{
+    color: white;
+}
+.right{
+    position: absolute;
+    right: 20px;
+}
+
+li .links span{
+    font-size: 18px;
+    color:#ffc107;
+}
+
+a.nav-link.links{
+    color: rgb(158, 157, 157);
+}
+a.nav-link.links:hover{
+    color: white;
+}
+.class {
+    position: absolute;
+    right:80px
+}
+
+.cover{
+    width:50%;
+    margin:20px;
+    border-radius: 3px;
+}

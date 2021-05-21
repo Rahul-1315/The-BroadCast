@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <br><br>
+    <fieldset style="border: 3px #ffc107 solid; padding: 20px;">
+        <h3>News Form Updation</h3>
+        <form action="/update/{{news.news_id}}" method="POST">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Headline</label>
+                <input required name='headline' type="text" class="form-control" id="exampleFormControlInput1"
+                    placeholder="Crisp Headlines Please!">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                <textarea required name='description' class="form-control" id="exampleFormControlTextarea1"
+                    rows="2">{{ news.description }}</textarea>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Author</label>
+                <input required name='author' type="text" class="form-control" id="exampleFormControlInput1"
+                    placeholder="Author" value="{{ news.author }}">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Category</label>
+                <input required name='category' type="text" class="form-control" id="exampleFormControlInput1"
+                    placeholder="Category" value="{{ news.category }}">
+            </div>
+            <center><button type="submit" class="btn btn-outline-warning btn-lg">Publish</button></center>
+        </form>
+    </fieldset>
+</div>
+<br><br>
+{% endblock %}
